@@ -1,11 +1,11 @@
-import mysql from 'mysql2/promise';
+import mysql from "mysql2/promise";
 
 const dbConfig = {
-  host: 'localhost',
-  port: '3306',
-  user: 'root',
-  password: 'senai',
-  database: 'aulas_senai',
+  host: "localhost",
+  port: "3306",
+  user: "root",
+  password: "senai",
+  database: "aulas_senai",
 };
 
 class ConexaoMySql {
