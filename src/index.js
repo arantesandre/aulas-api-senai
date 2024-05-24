@@ -1,8 +1,9 @@
+import cors from "cors";
 import express from "express";
+import AutenticacaoController from "./controllers/AutenticacaoController.js";
 import UsuariosController from "./controllers/UsuariosController.js";
 import ClientesController from "./controllers/ClientesController.js";
-import AutenticacaoController from "./controllers/AutenticacaoController.js";
-import cors from "cors";
+
 const port = 3000;
 
 const app = express();
