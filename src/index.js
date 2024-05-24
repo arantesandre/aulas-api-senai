@@ -1,11 +1,22 @@
 import express from "express";
 import UsuariosController from "./controllers/UsuariosController.js";
 import ClientesController from "./controllers/ClientesController.js";
-
+import AutenticacaoController from "./controllers/AutenticacaoController.js";
+import cors from "cors";
 const port = 3000;
 
 const app = express();
 app.use(express.json());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
+// autenticação
+const autenticacaoController = new AutenticacaoController();
+app.post('/logar', autenticacaoController.logar);
+
 
 const usuariosController = new UsuariosController();
 const clientesController = new ClientesController();
